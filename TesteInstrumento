@@ -1,0 +1,24 @@
+public class TesteInstrumentos {
+
+    public static void main(String[] args) {
+        Instrumento[] orquestra = new Instrumento[5];
+
+        orquestra[0] = new Sopro();
+        orquestra[1] = new Percussao();
+        orquestra[2] = new Corda();
+        orquestra[3] = new SoproMetal();
+        orquestra[4] = new SoproMadeira();
+
+        sinfonia(orquestra);
+    }
+
+    public static void sinfonia(Instrumento[] instrumentos) {
+        for (int i = 0; i < instrumentos.length; i++) {
+            System.out.println("---- Instrumento " + (i+1) + " ----");
+            instrumentos[i].nome();
+            instrumentos[i].afinar();
+            instrumentos[i].tocar();
+            System.out.println();
+        }
+    }
+}
